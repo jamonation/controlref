@@ -1,0 +1,31 @@
+{
+  "description": "Toggle sending HTTP referer headers",
+  "manifest_version": 2,
+  "name": "controlref",
+  "version": "0.0.1",
+  "homepage_url": "https://github.com/jamonation/controlref",
+
+  "applications": {
+    "gecko": {
+      "id": "controlref@jamon.ca"
+    }
+  },
+    
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>" 
+  ],
+  
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "browser_action": {
+    "default_title": "Toggle HTTP referer header on/off",
+    "default_icon":"icons/controlref.svg",
+    "browser_style": true
+  }
+
+}
